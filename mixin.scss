@@ -1,4 +1,14 @@
+@import "variable";
+
 @mixin display-flex {
   display: flex;
   justify-content: space-between;
+}
+@mixin btn-style {
+  padding: $padding / 2 $padding;
+  font-size: 1rem;
+  border-radius: .2rem;
+  background: #12a493;
+  color: white;
+  border: none;
 }

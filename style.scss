@@ -51,12 +51,9 @@ header {
 }
 
 section {
-  width: 90%;
-  margin: 2rem auto 5rem auto;
-  padding: $padding;
+  width: 100%;
   transition: .7s;
 }
-
 .carousel {
   figure {
     width: 100%;
@@ -66,10 +63,8 @@ section {
 
   img {
     display: none;
-    width: 98%;
-    margin: 2rem auto;
+    width: 100%;
     height: auto;
-    border-radius: 2vw;
     box-shadow: 5px 5px 5px 5px transparent;
     transition: .7s;
   }
@@ -77,15 +72,8 @@ section {
   img:hover {
     box-shadow: 5px 5px 5px 5px #c1b9b9;
   }
-
-  #prev {
-    float: left;
-    margin-left: 1rem;
-  }
-
-  #next {
-    float: right;
-    margin-right: 1rem;
+  .icon-flex {
+    @include display-flex;
   }
 
   i {
@@ -99,6 +87,11 @@ section {
   display: none;
 }
 
+.more-info {
+  width: 95%;
+  margin: auto;
+  padding: $padding;
+}
 .more-info {
   h2 {
     text-transform: capitalize;
@@ -123,17 +116,14 @@ section {
   form:hover {
     box-shadow: 3px 3px 3px 3px gray;
   }
-
-<<<<<<< HEAD
   .flex-input {
     @include display-flex;
-=======
-  .float-left {
-    float: left;
-    width: 49%;
-    margin-right: 1%;
->>>>>>> 9c1b6952ab463ec3cbba8306b8d9f0cfef0d2e69
   }
+  .float-left {
+  float: left;
+  width: 49%;
+  margin-right: 1%;
+}
 
   .user-name::after, .email-phone::after {
     clear: both;
@@ -168,12 +158,19 @@ section {
 
   #submit-btn {
     margin-top: 1rem;
-    border: none;
-    background-color: #12a493;
-    border-radius: .5rem;
-    padding: .8rem 2.5rem;
+    @include btn-style;
   }
 }
+.tab-buttons {
+  @include display-flex;
+}
+.tab-buttons {
+  button {
+    @include btn-style;
+  }
+}
+
+
 
 
 
