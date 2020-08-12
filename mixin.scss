@@ -12,3 +12,9 @@
   color: white;
   border: none;
 }
+@mixin h2-style {
+  text-transform: capitalize;
+  color: #12a493;
+  width: fit-content;
+  margin: 1rem 0;
+}

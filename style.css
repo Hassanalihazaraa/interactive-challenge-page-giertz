@@ -31,16 +31,15 @@ header i {
   text-transform: capitalize;
 }
 header span {
-  color: #660f9d;
+  color: #6309e0;
 }
-header li {
-  list-style: none;
-}
-header a {
-  text-decoration: none;
+header h2 {
   text-transform: capitalize;
-  font-size: 1rem;
+  color: #12a493;
+  width: fit-content;
+  margin: 1rem 0;
   color: white;
+  font-weight: bold;
 }
 
 section {
@@ -117,10 +116,10 @@ section {
   margin: auto;
   padding: 1rem;
   border: 1px solid transparent;
-  box-shadow: 3px 3px 3px 3px #d0cccc;
+  box-shadow: 5px 5px 5px 3px #d0cccc;
 }
 .more-info form:hover {
-  box-shadow: 3px 3px 3px 3px gray;
+  box-shadow: 5px 5px 5px 3px #bcbaba;
 }
 .more-info .flex-input {
   display: flex;
@@ -165,6 +164,11 @@ section {
   background: #12a493;
   color: white;
   border: none;
+  transition: 0.5s;
+}
+.more-info #submit-btn:hover {
+  color: #e6eae6;
+  background: #0d8578;
 }
 
 .tab-buttons {
@@ -191,6 +195,20 @@ section {
 }
 .tab-buttons button.active {
   background-color: #ccc;
+}
+
+footer {
+  width: 100%;
+  min-height: 8vh;
+  background: #d2d0d0;
+  margin-top: 1rem;
+}
+
+footer .copy-right {
+  text-align: center;
+  padding-top: 4vh;
+  color: black;
+  text-transform: capitalize;
 }
 
 /*# sourceMappingURL=style.css.map */

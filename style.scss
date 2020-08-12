@@ -35,18 +35,12 @@ header {
   }
 
   span {
-    color: #660f9d;
+    color: #6309e0;
   }
-
-  li {
-    list-style: none;
-  }
-
-  a {
-    text-decoration: none;
-    text-transform: capitalize;
-    font-size: 1rem;
+  h2 {
+    @include h2-style;
     color: white;
+    font-weight: bold;
   }
 }
 
@@ -116,10 +110,7 @@ section {
 }
 .more-info {
   h2 {
-    text-transform: capitalize;
-    color: #12a493;
-    width: fit-content;
-    margin: 1rem 0;
+    @include h2-style;
   }
 
   i {
@@ -132,11 +123,11 @@ section {
     margin: auto;
     padding: $padding;
     border: 1px solid transparent;
-    box-shadow: 3px 3px 3px 3px #d0cccc;
+    box-shadow: 5px 5px 5px 3px #d0cccc;
   }
 
   form:hover {
-    box-shadow: 3px 3px 3px 3px gray;
+    box-shadow: 5px 5px 5px 3px #bcbaba;
   }
   .flex-input {
     @include display-flex;
@@ -181,6 +172,11 @@ section {
   #submit-btn {
     margin-top: 1rem;
     @include btn-style;
+    transition: .5s;
+  }
+  #submit-btn:hover {
+    color: #e6eae6;
+    background: #0d8578;
   }
 }
 .tab-buttons {
@@ -209,6 +205,21 @@ section {
     background-color: #ccc;
   }
 }
+footer {
+  width: 100%;
+  min-height: 8vh;
+  background: #d2d0d0;
+  margin-top: 1rem;
+}
+footer {
+  .copy-right {
+    text-align: center;
+    padding-top: 4vh;
+    color: black;
+    text-transform: capitalize;
+  }
+}
+
 
 
 
