@@ -3,3 +3,49 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+section {
+  width: 90%;
+  margin: 5rem auto;
+  padding: 1rem;
+  transition: .7s;
+}
+section:hover {
+  box-shadow: 5px 5px 5px 5px #d6d1d1;
+}
+.carousel {
+  figure {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+  }
+  img {
+    display: block;
+    width: 95%;
+    margin: 2rem auto;
+    height: auto;
+    border-radius: 2vw;
+    box-shadow: 5px 5px 5px 5px #e3dddd;
+    transition: .7s;
+  }
+  img:hover {
+    box-shadow: 5px 5px 5px 5px #9f9898;
+  }
+  #prev {
+    float: left;
+    margin-left: 1rem;
+  }
+  #next {
+    float: right;
+    margin-right: 1rem;
+  }
+  i {
+    font-size: 5rem;
+    color: deepskyblue;
+  }
+}
+
+
+
