@@ -51,3 +51,38 @@ const showTabs = (e, tabs) => {
     e.currentTarget.className += " active";
 }
 
+//map inside the info
+const openStreetMap = () => {
+    const myMap = L.map('open-street-map').setView([51.22561, 4.40083], 18);
+    const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+    const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    const tiles = L.tileLayer(tileUrl, {attribution});
+    tiles.addTo(myMap);
+    const marker = L.marker([51.22561, 4.40083]).addTo(myMap);
+    marker.bindPopup("<b>Becode Party</b><br/><b>On Thursday 16 August 6 PM</b>").openPopup();
+}
+openStreetMap();
+
+//form validation
+document.getElementById("button").disabled = true;
+
+function emptycheck() {
+    if (document.getElementById("fullname").value == "" ||
+        document.getElementById("email").value == "" ||
+        document.getElementById("textarea").value == "") {
+        document.getElementById("button").disabled = true;
+    } else {
+        document.getElementById("button").disabled = false;
+    }
+}
+
+document.getElementById("fullname").onkeyup = function () {
+    emptycheck()
+};
+document.getElementById("email").onkeyup = function () {
+    emptycheck()
+};
+document.getElementById("textarea").onkeyup = function () {
+    emptycheck()
+};
+

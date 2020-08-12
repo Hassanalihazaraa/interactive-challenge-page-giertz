@@ -1,5 +1,6 @@
 @import "variable";
 @import "mixin";
+
 * {
   margin: 0;
   padding: 0;
@@ -54,6 +55,7 @@ section {
   width: 100%;
   transition: .7s;
 }
+
 .carousel {
   figure {
     width: 100%;
@@ -72,8 +74,23 @@ section {
   img:hover {
     box-shadow: 5px 5px 5px 5px #c1b9b9;
   }
-  .icon-flex {
-    @include display-flex;
+
+  #next, #prev {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  #next {
+    right: 0;
   }
 
   i {
@@ -92,6 +109,7 @@ section {
   margin: auto;
   padding: $padding;
 }
+
 .more-info {
   h2 {
     text-transform: capitalize;
@@ -116,14 +134,16 @@ section {
   form:hover {
     box-shadow: 3px 3px 3px 3px gray;
   }
+
   .flex-input {
     @include display-flex;
   }
+
   .float-left {
-  float: left;
-  width: 49%;
-  margin-right: 1%;
-}
+    float: left;
+    width: 49%;
+    margin-right: 1%;
+  }
 
   .user-name::after, .email-phone::after {
     clear: both;
@@ -161,9 +181,11 @@ section {
     @include btn-style;
   }
 }
+
 .tab-buttons {
   @include display-flex;
 }
+
 .tab-buttons {
   button {
     @include btn-style;
@@ -171,6 +193,11 @@ section {
 }
 
 
+//here is another import css you can change the width and height if you want
+#open-street-map {
+  width: 100%;
+  height: 25rem;
+}
 
 
 
