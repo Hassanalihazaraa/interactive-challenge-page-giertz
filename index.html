@@ -5,75 +5,87 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Interactive web-page about BeCode party"><meta>
+    <meta name="description" content="Interactive web-page about BeCode party">
+    <meta>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <title>interactive-page</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <i class="fas fa-glass-cheers"> be<span>Code</span> party</i>
+<header>
+    <nav>
+        <div class="logo">
+            <i class="fas fa-glass-cheers"> be<span>Code</span> party</i>
+        </div>
+        <ul>
+            <li><a href="">party</a></li>
+            <li><a href="">info</a></li>
+            <li><a href="">contact</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="carousel">
+    <figure>
+        <img class="party-pic" src="images/img1.jpg" alt="party-image">
+        <img class="party-pic" src="images/img2.jpg" alt="party-image">
+        <img class="party-pic" src="images/img3.jpg" alt="party-image">
+    </figure>
+    <a id="prev"><i class="fas fa-caret-left"></i></a>
+    <a id="next"><i class="fas fa-caret-right"></i></a>
+</section>
+<section class="more-info">
+    <div class="tab-buttons">
+        <button id="summary-btn" class="tabLinks" onclick="showTabs(event, 'details')">Summary</button>
+        <button id="practical-btn" class="tabLinks" onclick="showTabs(event, 'info')">Practical Info</button>
+        <button id="form-btn" class="tabLinks" onclick="showTabs(event, 'contact-form')">Contact Form</button>
+    </div>
+    <div class="summary tab-content" id="details">
+        <h2>about the party activities</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem consequatur deleniti dolor et fuga, harum
+            ipsam labore quia quibusdam repudiandae sapiente veniam? Accusantium alias animi beatae cupiditate eligendi
+            esse facilis hic illum inventore ipsa iste itaque iusto, labore laboriosam laborum laudantium magnam
+            molestias obcaecati omnis placeat, quod sit voluptas voluptates? Ab aliquid fugit hic ipsa minus obcaecati
+            odio omnis quia quis quo repellendus sint tempora ut, veritatis voluptatibus? A atque consequatur cum
+            deserunt dolorum ducimus, earum eligendi et illo illum incidunt ipsum itaque laborum laudantium, maiores
+            maxime mollitia nostrum, numquam pariatur quis quo saepe sapiente soluta ut vel veniam.</p>
+    </div>
+    <div class="practical-info tab-content" id="info">
+        <h2>practical info</h2>
+        <a href="mailto:becode3@gmail.com"><i class="fas fa-envelope"> email</i></a>
+        <div class="map">
+            <div id="open-street-map">
             </div>
-            <ul>
-                <li><a href="">party</a></li>
-                <li><a href="">info</a></li>
-                <li><a href="">contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="carousel">
-        <figure>
-            <img class="party-pic" src="images/img1.jpg" alt="party-image">
-            <img class="party-pic" src="images/img2.jpg" alt="party-image">
-            <img class="party-pic" src="images/img3.jpg" alt="party-image">
-        </figure>
-        <a id="prev" href=""><i class="fas fa-caret-left"></i></a>
-        <a id="next" href=""><i class="fas fa-caret-right"></i></a>
-    </section>
-    <section class="more-info">
-        <div class="summary">
-            <h2>about the party activities</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem consequatur deleniti dolor et fuga, harum ipsam labore quia quibusdam repudiandae sapiente veniam? Accusantium alias animi beatae cupiditate eligendi esse facilis hic illum inventore ipsa iste itaque iusto, labore laboriosam laborum laudantium magnam molestias obcaecati omnis placeat, quod sit voluptas voluptates? Ab aliquid fugit hic ipsa minus obcaecati odio omnis quia quis quo repellendus sint tempora ut, veritatis voluptatibus? A atque consequatur cum deserunt dolorum ducimus, earum eligendi et illo illum incidunt ipsum itaque laborum laudantium, maiores maxime mollitia nostrum, numquam pariatur quis quo saepe sapiente soluta ut vel veniam.</p>
         </div>
-        <div class="practical-info">
-            <h2>practical info</h2>
-            <a href="mailto:becode3@gmail.com"><i class="fas fa-envelope"> email</i></a>
-            <div class="map">
-                <div id="open-street-map">
-
+    </div>
+    <div class="form tab-content" id="contact-form">
+        <h2>contact us</h2>
+        <form action="">
+            <div class="user-name">
+                <div class="flex-column float-left">
+                    <label for="first-name">first name</label>
+                    <input name="first-name" type="text" placeholder="enter first name">
+                </div>
+                <div class="flex-column float-left">
+                    <label for="last-name">last name</label>
+                    <input name="last-name" type="text" placeholder="enter last name">
                 </div>
             </div>
-        </div>
-        <div class="form">
-            <h2>contact us</h2>
-            <form action="">
-                <div class="user-name">
-                    <div class="flex-column float-left">
-                        <label for="first-name">first name</label>
-                        <input name="first-name" type="text" placeholder="enter first name">
-                    </div>
-                    <div class="flex-column float-left">
-                        <label for="last-name">last name</label>
-                        <input name="last-name" type="text" placeholder="enter last name">
-                    </div>
+            <div class="email-phone">
+                <div class="flex-column float-left">
+                    <label for="email">email</label>
+                    <input name="email" type="email" placeholder="enter email">
                 </div>
-                <div class="email-phone">
-                    <div class="flex-column float-left">
-                        <label for="email">email</label>
-                        <input name="email" type="email" placeholder="enter email">
-                    </div>
-                    <div class="flex-column float-left">
-                        <label for="phone">phone</label>
-                        <input name="phone" type="number" placeholder="enter phone number">
-                    </div>
+                <div class="flex-column float-left">
+                    <label for="phone">phone</label>
+                    <input name="phone" type="number" placeholder="enter phone number">
                 </div>
-                <textarea name="" id="" cols="30" rows="10" placeholder="write your message"></textarea>
-                <input id="submit-btn" type="submit" value="submit">
-            </form>
-        </div>
-    </section>
-    <script src="https://kit.fontawesome.com/b3478a18b6.js" crossorigin="anonymous"></script>
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="write your message"></textarea>
+            <input id="submit-btn" type="submit" value="submit">
+        </form>
+    </div>
+</section>
+<script src="index.js"></script>
+<script src="https://kit.fontawesome.com/b3478a18b6.js" crossorigin="anonymous"></script>
 </body>
 </html>
