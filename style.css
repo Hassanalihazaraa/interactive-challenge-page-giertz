@@ -8,15 +8,46 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-section {
-  width: 90%;
-  margin: 5rem auto;
+header {
+  width: 100%;
+  background-color: cadetblue;
+  align-items: center;
   padding: 1rem;
-  transition: 0.7s;
 }
 
-section:hover {
-  box-shadow: 5px 5px 5px 5px #d6d1d1;
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header ul {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+header i {
+  font-size: 2rem;
+  color: white;
+  text-transform: capitalize;
+}
+header span {
+  color: #660f9d;
+}
+header li {
+  list-style: none;
+}
+header a {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1rem;
+  color: white;
+}
+
+section {
+  width: 90%;
+  margin: 2rem auto 5rem auto;
+  padding: 1rem;
+  transition: 0.7s;
 }
 
 .carousel figure {
@@ -26,15 +57,15 @@ section:hover {
 }
 .carousel img {
   display: block;
-  width: 95%;
+  width: 98%;
   margin: 2rem auto;
   height: auto;
   border-radius: 2vw;
-  box-shadow: 5px 5px 5px 5px #e3dddd;
+  box-shadow: 5px 5px 5px 5px transparent;
   transition: 0.7s;
 }
 .carousel img:hover {
-  box-shadow: 5px 5px 5px 5px #9f9898;
+  box-shadow: 5px 5px 5px 5px #c1b9b9;
 }
 .carousel #prev {
   float: left;
@@ -47,6 +78,23 @@ section:hover {
 .carousel i {
   font-size: 5rem;
   color: deepskyblue;
+}
+
+.more-info h2 {
+  text-transform: capitalize;
+  color: #12a493;
+  width: fit-content;
+  margin: 1rem 0;
+}
+.more-info i {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+.more-info form {
+  width: 100%;
+  margin: auto;
+  border: 1px solid transparent;
+  box-shadow: 3px 3px 3px 3px gray;
 }
 
 /*# sourceMappingURL=style.css.map */
