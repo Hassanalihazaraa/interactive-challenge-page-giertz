@@ -21,9 +21,9 @@ header nav {
   align-items: center;
 }
 header ul {
-  width: 40%;
+  width: 30%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 header i {
   font-size: 2rem;

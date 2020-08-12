@@ -1,3 +1,5 @@
+@import "variable";
+@import "mixin";
 * {
   margin: 0;
   padding: 0;
@@ -10,18 +12,16 @@ header {
   width: 100%;
   background-color: cadetblue;
   align-items: center;
-  padding: 1rem;
+  padding: $padding;
 }
 header {
   nav {
-    display: flex;
-    justify-content: space-between;
+    @include display-flex;
     align-items: center;
   }
   ul {
-    width: 40%;
-    display: flex;
-    justify-content: space-around;
+    width: 30%;
+    @include display-flex;
   }
   i {
     font-size: 2rem;
@@ -44,7 +44,7 @@ header {
 section {
   width: 90%;
   margin: 2rem auto 5rem auto;
-  padding: 1rem;
+  padding: $padding;
   transition: .7s;
 }
 .carousel {
@@ -95,7 +95,7 @@ section {
   form {
     width: 100%;
     margin: auto;
-    padding: 1rem;
+    padding: $padding;
     border: 1px solid transparent;
     box-shadow: 3px 3px 3px 3px #d0cccc;
   }
@@ -105,8 +105,7 @@ section {
   }
 
   .flex-input {
-    display: flex;
-    justify-content: space-between;
+    @include display-flex;
   }
 
   input {
