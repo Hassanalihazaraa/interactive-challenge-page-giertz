@@ -6,10 +6,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Interactive web-page about BeCode party">
-    <meta>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+          integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+            integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+            crossorigin=""></script>
     <title>interactive-page</title>
+
 </head>
 <body>
 <header>
@@ -28,8 +33,8 @@
         <img class="party-pic" src="images/img2.jpg" alt="party-image">
         <img class="party-pic" src="images/img3.jpg" alt="party-image">
     </figure>
-    <a id="prev"><i class="fas fa-chevron-left"></i></a>
-    <a id="next"><i class="fas fa-chevron-right"></i></a>
+    <a id="prev"><i class="fas fa-caret-left"></i></a>
+    <a id="next"><i class="fas fa-caret-right"></i></a>
 </section>
 <section class="more-info">
     <div class="tab-buttons">
@@ -51,9 +56,9 @@
         <h2>practical info</h2>
         <a href="mailto:becode3@gmail.com"><i class="fas fa-envelope"> email</i></a>
         <div class="map">
-            <div id="open-street-map">
-            </div>
+            <div id="open-street-map"></div>
         </div>
+
     </div>
     <div class="form tab-content" id="contact-form">
         <h2>contact us</h2>
@@ -78,10 +83,17 @@
                     <input id="phone" name="phone" type="text" placeholder="enter phone number">
                 </div>
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="write your message"></textarea>
+            <textarea name="" id="text-area" cols="30" rows="10" placeholder="write your message"></textarea>
             <input id="submit-btn" type="submit" value="submit">
         </form>
     </div>
+    <section class="counter">
+        <h1>Number of events</h1>
+        <div class="counter-container">
+            <p>Number of visitors</p>
+            <p id="counter-number">1</p>
+        </div>
+    </section>
 </section>
 <footer>
     <p class="copy-right">&copy;copyRight hassan-Awet reserved2020</p>

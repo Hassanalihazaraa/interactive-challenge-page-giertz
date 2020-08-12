@@ -197,6 +197,7 @@ section {
   background-color: #ccc;
 }
 
+<<<<<<< HEAD
 footer {
   width: 100%;
   min-height: 8vh;
@@ -209,6 +210,11 @@ footer .copy-right {
   padding-top: 4vh;
   color: black;
   text-transform: capitalize;
+=======
+#open-street-map {
+  width: 100%;
+  height: 25rem;
+>>>>>>> 66d9adf29b8dbbb84b918b3dda4032a27d0e5f7d
 }
 
 /*# sourceMappingURL=style.css.map */
