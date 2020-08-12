@@ -93,8 +93,50 @@ section {
 .more-info form {
   width: 100%;
   margin: auto;
+  padding: 1rem;
   border: 1px solid transparent;
+  box-shadow: 3px 3px 3px 3px #d0cccc;
+}
+.more-info form:hover {
   box-shadow: 3px 3px 3px 3px gray;
+}
+.more-info .float-left {
+  float: left;
+  width: 49%;
+  margin-right: 1%;
+}
+.more-info .user-name::after, .more-info .email-phone::after {
+  clear: both;
+  content: "";
+  display: table;
+  margin-bottom: 1rem;
+}
+.more-info .flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.more-info textarea {
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 20vh;
+  min-height: 10vh;
+}
+.more-info label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.more-info input, .more-info textarea {
+  text-transform: capitalize;
+  font-size: 1rem;
+  padding: 0.2rem;
+}
+.more-info #submit-btn {
+  margin-top: 1rem;
+  border: none;
+  background-color: #12a493;
+  border-radius: 0.5rem;
+  padding: 0.8rem 2.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

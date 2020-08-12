@@ -47,15 +47,30 @@
             </div>
         </div>
         <div class="form">
+            <h2>contact us</h2>
             <form action="">
-                <label for="first-name">first name</label>
-                <input name="first-name" type="text" placeholder="enter first name">
-                <label for="last-name">last name</label>
-                <input name="last-name" type="text" placeholder="enter last name">
-                <label for="email">email</label>
-                <input type="email" placeholder="enter email">
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <input type="submit" value="submit">
+                <div class="user-name">
+                    <div class="flex-column float-left">
+                        <label for="first-name">first name</label>
+                        <input name="first-name" type="text" placeholder="enter first name">
+                    </div>
+                    <div class="flex-column float-left">
+                        <label for="last-name">last name</label>
+                        <input name="last-name" type="text" placeholder="enter last name">
+                    </div>
+                </div>
+                <div class="email-phone">
+                    <div class="flex-column float-left">
+                        <label for="email">email</label>
+                        <input name="email" type="email" placeholder="enter email">
+                    </div>
+                    <div class="flex-column float-left">
+                        <label for="phone">phone</label>
+                        <input name="phone" type="number" placeholder="enter phone number">
+                    </div>
+                </div>
+                <textarea name="" id="" cols="30" rows="10" placeholder="write your message"></textarea>
+                <input id="submit-btn" type="submit" value="submit">
             </form>
         </div>
     </section>
