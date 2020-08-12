@@ -64,25 +64,43 @@ const openStreetMap = () => {
 openStreetMap();
 
 //form validation
-document.getElementById("button").disabled = true;
+let submitBtn = document.getElementById("submit-btn");
+submitBtn.disabled = true;
+const firstName = document.getElementById("first-name");
+const lastName = document.getElementById("last-name");
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
+const textArea = document.getElementById("text-area");
 
-function emptycheck() {
-    if (document.getElementById("fullname").value == "" ||
-        document.getElementById("email").value == "" ||
-        document.getElementById("textarea").value == "") {
-        document.getElementById("button").disabled = true;
+function validate() {
+    if (firstName.value === "" || lastName.value === "" || email.value === "" || phone.value === "" || textArea.value === "") {
+        submitBtn.disabled = true;
     } else {
-        document.getElementById("button").disabled = false;
+        submitBtn.disabled = false;
     }
 }
 
-document.getElementById("fullname").onkeyup = function () {
-    emptycheck()
+firstName.onkeyup = function () {
+    validate()
 };
-document.getElementById("email").onkeyup = function () {
-    emptycheck()
+lastName.onkeyup = function () {
+    validate()
 };
-document.getElementById("textarea").onkeyup = function () {
-    emptycheck()
+email.onkeyup = function () {
+    validate()
+};
+phone.onkeyup = function () {
+    validate()
+};
+textArea.onkeyup = function () {
+    validate()
 };
 
+
+//counter
+let number = '1';
+window.setInterval(() => {
+    number++;
+    document.getElementById("counter-number").innerHTML = number;
+    console.log(number)
+}, 500);
