@@ -55,6 +55,11 @@ section {
   transition: .7s;
 }
 .carousel {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+.carousel {
   figure {
     width: 100%;
     margin: auto;
@@ -64,7 +69,9 @@ section {
   img {
     display: none;
     width: 100%;
-    height: auto;
+    height: 75vh;
+    object-fit: cover;
+    object-position: center;
     box-shadow: 5px 5px 5px 5px transparent;
     transition: .7s;
   }
@@ -72,12 +79,27 @@ section {
   img:hover {
     box-shadow: 5px 5px 5px 5px #c1b9b9;
   }
-  .icon-flex {
-    @include display-flex;
+
+  #next, #prev {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  #next {
+    right: 0;
   }
 
   i {
-    font-size: 5rem;
+    font-size: 2rem;
     color: deepskyblue;
   }
 }
@@ -162,13 +184,29 @@ section {
   }
 }
 .tab-buttons {
-  @include display-flex;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
 }
 .tab-buttons {
   button {
-    @include btn-style;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  button:hover {
+    background-color: #ddd;
+  }
+  button.active {
+    background-color: #ccc;
   }
 }
+
 
 
 

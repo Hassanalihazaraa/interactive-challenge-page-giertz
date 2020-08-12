@@ -48,6 +48,12 @@ section {
   transition: 0.7s;
 }
 
+.carousel {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+
 .carousel figure {
   width: 100%;
   margin: auto;
@@ -56,19 +62,33 @@ section {
 .carousel img {
   display: none;
   width: 100%;
-  height: auto;
+  height: 75vh;
+  object-fit: cover;
+  object-position: center;
   box-shadow: 5px 5px 5px 5px transparent;
   transition: 0.7s;
 }
 .carousel img:hover {
   box-shadow: 5px 5px 5px 5px #c1b9b9;
 }
-.carousel .icon-flex {
-  display: flex;
-  justify-content: space-between;
+.carousel #next, .carousel #prev {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.carousel #next {
+  right: 0;
 }
 .carousel i {
-  font-size: 5rem;
+  font-size: 2rem;
   color: deepskyblue;
 }
 
@@ -148,17 +168,26 @@ section {
 }
 
 .tab-buttons {
-  display: flex;
-  justify-content: space-between;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
 }
 
 .tab-buttons button {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border-radius: 0.2rem;
-  background: #12a493;
-  color: white;
+  background-color: inherit;
+  float: left;
   border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+.tab-buttons button:hover {
+  background-color: #ddd;
+}
+.tab-buttons button.active {
+  background-color: #ccc;
 }
 
 /*# sourceMappingURL=style.css.map */
