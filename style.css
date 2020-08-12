@@ -197,7 +197,6 @@ section {
   background-color: #ccc;
 }
 
-<<<<<<< HEAD
 footer {
   width: 100%;
   min-height: 8vh;
@@ -210,11 +209,31 @@ footer .copy-right {
   padding-top: 4vh;
   color: black;
   text-transform: capitalize;
-=======
+}
+
 #open-street-map {
   width: 100%;
   height: 25rem;
->>>>>>> 66d9adf29b8dbbb84b918b3dda4032a27d0e5f7d
+}
+
+.counter {
+  width: 100%;
+  background-image: url("images/img5.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.counter h2 {
+  text-transform: capitalize;
+  color: #12a493;
+  width: fit-content;
+  margin: 1rem 0;
+}
+.counter p {
+  color: #f5f2f5;
 }
 
 /*# sourceMappingURL=style.css.map */
